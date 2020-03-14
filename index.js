@@ -336,13 +336,13 @@ function getGermanCars(/* code here */) {
  *         (1) causes the odometer in the object to be increased by the distance,
  *         (2) returns the updated value of the `odometer`.
 */
-function carMaker(odometer/* code here */) {
+function carMaker(starMileage/* code here */) {
   /* code here */
   return {
-    odometer: this.odometer,
-    drive: function (distance){
-      odometer+=distance;
-      return odometer;
+    odometer: starMileage,
+    drive(distance){
+      this.odometer+=distance;
+      return this.odometer;
     }
   }
 }
